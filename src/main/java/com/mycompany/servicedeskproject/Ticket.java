@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.servicedeskproject;
 
-/**
+/**    /**
+
  *
  * @author Raque
  */
 public class Ticket extends javax.swing.JFrame {
-
     /**
+
      * Creates new form Ticket
      */
     public Ticket() {
         initComponents();
+       ;
     }
 
     /**
@@ -27,6 +25,8 @@ public class Ticket extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bg_TypeTicket = new javax.swing.ButtonGroup();
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jft_employeeNumber = new javax.swing.JTextField();
@@ -37,6 +37,13 @@ public class Ticket extends javax.swing.JFrame {
         jtf_department = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jtf_contact = new javax.swing.JTextField();
+        jrb_Request = new javax.swing.JRadioButton();
+        jrb_Incident = new javax.swing.JRadioButton();
+        jb_Check = new javax.swing.JButton();
+        jb_next = new javax.swing.JButton();
+        jb_return = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,6 +75,43 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
 
+        bg_TypeTicket.add(jrb_Request);
+        jrb_Request.setText("Service Resquest");
+        jrb_Request.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_RequestActionPerformed(evt);
+            }
+        });
+
+        bg_TypeTicket.add(jrb_Incident);
+        jrb_Incident.setText("Incidente");
+        jrb_Incident.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrb_IncidentActionPerformed(evt);
+            }
+        });
+
+        jb_Check.setText("Check");
+        jb_Check.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_CheckActionPerformed(evt);
+            }
+        });
+
+        jb_next.setText("Next");
+        jb_next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_nextActionPerformed(evt);
+            }
+        });
+
+        jb_return.setText("Return");
+        jb_return.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_returnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -75,22 +119,36 @@ public class Ticket extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jft_name, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jft_employeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_department, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_contact, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(156, 156, 156)
-                        .addComponent(jLabel1)))
-                .addContainerGap(98, Short.MAX_VALUE))
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jft_name, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jft_employeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jb_Check))
+                                    .addComponent(jtf_department, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtf_contact, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jrb_Request)
+                                    .addComponent(jb_return))
+                                .addGap(37, 37, 37)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jb_next)
+                                    .addComponent(jrb_Incident))
+                                .addGap(16, 16, 16)))))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,7 +158,8 @@ public class Ticket extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jft_employeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jft_employeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_Check))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -113,14 +172,25 @@ public class Ticket extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jtf_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jrb_Request)
+                    .addComponent(jrb_Incident))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_next)
+                    .addComponent(jb_return))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,6 +212,27 @@ public class Ticket extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_contactActionPerformed
 
+    private void jrb_RequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_RequestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrb_RequestActionPerformed
+
+    private void jrb_IncidentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrb_IncidentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrb_IncidentActionPerformed
+
+    private void jb_CheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_CheckActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_CheckActionPerformed
+
+    private void jb_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_nextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_nextActionPerformed
+
+    private void jb_returnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_returnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_returnActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -178,14 +269,21 @@ public class Ticket extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bg_TypeTicket;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jb_Check;
+    private javax.swing.JButton jb_next;
+    private javax.swing.JButton jb_return;
     private javax.swing.JTextField jft_employeeNumber;
     private javax.swing.JTextField jft_name;
+    private javax.swing.JRadioButton jrb_Incident;
+    private javax.swing.JRadioButton jrb_Request;
     private javax.swing.JTextField jtf_contact;
     private javax.swing.JTextField jtf_department;
     // End of variables declaration//GEN-END:variables
