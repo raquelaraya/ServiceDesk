@@ -16,6 +16,7 @@ public class ServiceRequest extends javax.swing.JFrame {
      */
     public ServiceRequest() {
         initComponents();
+      
     }
 
     /**
@@ -27,45 +28,138 @@ public class ServiceRequest extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jp_requestType = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jtf_rNumber = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jcb_typeRequest = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jb_sendRequest = new javax.swing.JButton();
+        jb_exitRequest = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Service Request");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addComponent(jLabel1)
-                .addContainerGap(320, Short.MAX_VALUE))
+        jLabel2.setText("Request Number:");
+
+        jLabel3.setText("Type:");
+
+        jcb_typeRequest.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Help Desk", "Aplicaciones", "Seguridad", "Infraestructura", "        " }));
+        jcb_typeRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcb_typeRequestActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Description:");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jb_sendRequest.setText("Send");
+        jb_sendRequest.setToolTipText("");
+        jb_sendRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_sendRequestActionPerformed(evt);
+            }
+        });
+
+        jb_exitRequest.setText("Exit");
+        jb_exitRequest.setToolTipText("");
+        jb_exitRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_exitRequestActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jp_requestTypeLayout = new javax.swing.GroupLayout(jp_requestType);
+        jp_requestType.setLayout(jp_requestTypeLayout);
+        jp_requestTypeLayout.setHorizontalGroup(
+            jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_requestTypeLayout.createSequentialGroup()
+                .addGroup(jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_requestTypeLayout.createSequentialGroup()
+                        .addGap(260, 260, 260)
+                        .addComponent(jLabel1))
+                    .addGroup(jp_requestTypeLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(18, 18, 18)
+                        .addGroup(jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcb_typeRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_rNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_requestTypeLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jb_exitRequest)
+                .addGap(61, 61, 61)
+                .addComponent(jb_sendRequest)
+                .addGap(98, 98, 98))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        jp_requestTypeLayout.setVerticalGroup(
+            jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_requestTypeLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addContainerGap(443, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jtf_rNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jcb_typeRequest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_requestTypeLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4))
+                    .addGroup(jp_requestTypeLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
+                .addGroup(jp_requestTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_sendRequest)
+                    .addComponent(jb_exitRequest))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jp_requestType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jp_requestType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        jp_requestType.getAccessibleContext().setAccessibleParent(jp_requestType);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jcb_typeRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_typeRequestActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jcb_typeRequestActionPerformed
+
+    private void jb_sendRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_sendRequestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_sendRequestActionPerformed
+
+    private void jb_exitRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_exitRequestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_exitRequestActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,6 +198,15 @@ public class ServiceRequest extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton jb_exitRequest;
+    private javax.swing.JButton jb_sendRequest;
+    private javax.swing.JComboBox<String> jcb_typeRequest;
+    private javax.swing.JPanel jp_requestType;
+    private javax.swing.JTextField jtf_rNumber;
     // End of variables declaration//GEN-END:variables
 }
