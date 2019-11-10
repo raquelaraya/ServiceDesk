@@ -198,7 +198,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="bg_TypeTicket"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Incidente"/>
+            <Property name="text" type="java.lang.String" value="Incident"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrb_IncidentActionPerformed"/>

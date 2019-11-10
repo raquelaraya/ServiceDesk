@@ -84,7 +84,7 @@ public class Ticket extends javax.swing.JFrame {
         });
 
         bg_TypeTicket.add(jrb_Incident);
-        jrb_Incident.setText("Incidente");
+        jrb_Incident.setText("Incident");
         jrb_Incident.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jrb_IncidentActionPerformed(evt);
